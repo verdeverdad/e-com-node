@@ -1,7 +1,8 @@
 
 const express = require("express");
 const app = express();
-const port = 3000
+const PORT = process.env.PORT || 3000;
+//const port = 3000
 const carrito = require('./carrito.json');
 const category_info = require('./category_info.json');
 const category = require('./category.json');
