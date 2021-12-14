@@ -45,7 +45,7 @@ app.get("/otra_ruta", (req, res)=>{
 });
 
 
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
     console.log("Escuchando a http://localhost:" + port)
 });
 
