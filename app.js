@@ -1,7 +1,8 @@
 
 const express = require("express");
 const app = express();
-const port = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
+//slkndfsjdglskdgn
 //const port = 3000
 const carrito = require('./carrito.json');
 const category_info = require('./category_info.json');
@@ -44,10 +45,7 @@ app.get("/otra_ruta", (req, res)=>{
 });
 
 
-app.listen(port, ()=>{
-    
+app.listen(PORT, ()=>{
+    console.log("Escuchando a http://localhost:" + port)
 });
 
-let elNombre = require("./nombre.js")
-
-console.log(elNombre);
