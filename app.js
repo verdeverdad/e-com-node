@@ -12,10 +12,6 @@ const product_info = require('./product_info.json');
 const productos = require('./productos.json');
 app.use(express.static(__dirname + "/static"));
 
-app.use((req, res, next)=>{
-    res.header("Access-Control-Allow-Origin", "*");
-    next()
-})
 
 app.get("/carrito", (req, res)=>{
     res.send(carrito)
