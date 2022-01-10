@@ -1,13 +1,17 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+  }
+  
+  const DB_URI = process.env.DB_URI
+  const PORT = process.env.PORT || 3000;
 
 
-const app = express();
+//const port =  3000;
 
-const express = require("express"),
+const express = require("express")
+const path = require("path")
+const app = express()
 
-
-const puerto = process.env.PORT || 3001; 
-//slkndfsjdglskdgn
-//const port = 3000
 const carrito = require('./carrito.json');
 const category_info = require('./category_info.json');
 const category = require('./category.json');
@@ -46,7 +50,6 @@ app.get("/otra_ruta", (req, res)=>{
 });
 
 
-app.listen(puerto, ()=>{
-    console.log("Escuchando a http://localhost:" + puerto)
+app.listen(PORT, () => {
+    console.log("Escuchando a http://localhost:" + PORT)
 });
-
