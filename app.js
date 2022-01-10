@@ -1,7 +1,11 @@
 
-const express = require("express");
+
 const app = express();
-const port = process.env.port || 3001;
+
+const express = require("express"),
+
+
+const puerto = process.env.PORT || 3001; 
 //slkndfsjdglskdgn
 //const port = 3000
 const carrito = require('./carrito.json');
@@ -42,7 +46,7 @@ app.get("/otra_ruta", (req, res)=>{
 });
 
 
-app.listen(port, ()=>{
-    console.log("Escuchando a http://localhost:" + port)
+app.listen(puerto, ()=>{
+    console.log("Escuchando a http://localhost:" + puerto)
 });
 
